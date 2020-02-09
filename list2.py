@@ -24,7 +24,11 @@ Kenzie assignment: List2
 
 def remove_adjacent(nums):
     # your code here
-    return
+    list= []
+    for num in nums:
+        if not(num in list):
+            list.append(num)
+    return list
 
 
 # E. Given two lists sorted in increasing order, create and return a merged
@@ -33,10 +37,24 @@ def remove_adjacent(nums):
 # Hint: Don't use `sort` or `sorted` -- they are not O(n) linear time, and the two lists
 # are already provided in ascending sorted order.
 def linear_merge(list1, list2):
-    # your code here
-    return
+ 
+  merged = []
 
+  while len(list1) > 0 and len(list2) > 0:
+    if list1[-1] > list2[-1]:
+      merged.append(list1.pop(-1))
+    else:
+      merged.append(list2.pop(-1))
+  
+  while len(list1) > 0:
+    merged.append(list1.pop(-1))
+  while len(list2) > 0:
+    merged.append(list.pop(-1))
+	
 
+  return merged[::-1]
+
+## so confusing. redo long. other than pop, nope gotta
 # Simple provided test() function used in main() to print
 # what each function returns vs. what it's supposed to return.
 def test(got, expected):
