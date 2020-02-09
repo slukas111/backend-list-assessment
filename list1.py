@@ -26,9 +26,14 @@ Kenzie List1 Assignment
 
 
 def match_ends(words):
+    count = 0
+    for sWord in words:
+        if len(sWord) >= 2 and sWord[0]==sWord[-1]:
+         count += 1
+
     ##testing
     # your code here
-    return
+    return count
 
 
 # B. front_x
