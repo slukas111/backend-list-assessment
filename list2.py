@@ -23,12 +23,14 @@ Kenzie assignment: List2
 
 
 def remove_adjacent(nums):
-    # your code here
-    list= []
-    for num in nums:
-        if not(num in list):
-            list.append(num)
-    return list
+  result = []
+  for item in nums:
+    if len(result):
+      if result[-1] != item:
+        result.append(item)
+    else: 
+      result.append(item)        
+  return result
 
 
 # E. Given two lists sorted in increasing order, create and return a merged

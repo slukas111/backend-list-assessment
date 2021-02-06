@@ -52,11 +52,8 @@ def front_x(words):
             start_w_x.append(word)
         else:
             result.append(word)
-
-    start_w_x = sorted(start_w_x)
-    result = sorted(result)
   
-    return start_w_x + result
+    return sorted(start_w_x) + sorted(result)
 
 
 # C. sort_last
